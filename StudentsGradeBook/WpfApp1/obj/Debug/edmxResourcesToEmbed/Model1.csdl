@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="studentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="student_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="student_sub1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="student_sub2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="student_sub3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="student_grade1" Type="Int32" />
+    <Property Name="student_grade2" Type="Int32" />
+    <Property Name="student_grade3" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="studentEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="students" EntityType="Self.student" />
+  </EntityContainer>
+</Schema>
